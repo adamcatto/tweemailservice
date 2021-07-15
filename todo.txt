@@ -1,0 +1,24 @@
+* delete tweets.csv after sending mail
+* handle cases where a user has not tweeted over time period in question
+* actually download + display media in email instead of media URLs
+* setup.py:
+    + email account
+    + email password
+    + twitter dev auth keys/tokens
+    + let user control time over which to schedule emails
+    + setup plist to run main.py in background on macOS / same sort of thing for other operating systems
+    + set config.last_update_timestamp to datetime.now()
+    + initialize users to follow
+        + twitter username
+        + lists
+        + comma-separated CLI args (or flexible patterns)
+* write scripts to allow user to update config params without having to go into the config, e.g.
+    + --add_account_to_follow
+    + --add_list_to_follow
+    + --remove_account_to_follow
+    + --remove_list_to_follow
+    + --overwrite_config_param (param_name, new_value)
+* make sure the retweet/reply filtering actually works
+* possibly get tweets that tweet is replying to
+* fix key/value switching in tweet dict to be emailed
+* format everything more nicely
